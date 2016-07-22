@@ -33,5 +33,10 @@ public class MessageResource {
 		return messageService.getMessage(Id); 
 		
 	}
-	
+	 @GET
+	 @Path("/test")
+	    @Produces(MediaType.TEXT_PLAIN)
+	    public String getIt() {
+	        return "Got it!";
+	    }
 }

@@ -10,6 +10,8 @@
     <name>messenger</name>
 
     <build>
+    
+    
         <finalName>messenger</finalName>
         <plugins>
             <plugin>
