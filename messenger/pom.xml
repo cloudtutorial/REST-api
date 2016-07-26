@@ -40,17 +40,28 @@
     </dependencyManagement>
 
     <dependencies>
-        <dependency>
+         <dependency>
             <groupId>org.glassfish.jersey.containers</groupId>
             <artifactId>jersey-container-servlet-core</artifactId>
-            <!-- use the following artifactId if you don't need servlet 2.x compatibility -->
-            <!-- artifactId>jersey-container-servlet</artifactId -->
+           <!--  use the following artifactId if you don't need servlet 2.x compatibility
+            artifactId>jersey-container-servlet</artifactId -->
         </dependency>
          <dependency>
             <groupId>org.glassfish.jersey.media</groupId>
             <artifactId>jersey-media-moxy</artifactId>
-        </dependency>
+        </dependency> 
+        <!-- <dependency>
+			<groupId>org.jboss.resteasy</groupId>
+			<artifactId>resteasy-jaxrs</artifactId>
+			<version>3.0.4.Final</version>
+		</dependency> -->
        </dependencies>
+       
+       
+       
+       
+       
+       
     <properties>
         <jersey.version>2.16</jersey.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

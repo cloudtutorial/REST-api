@@ -3,7 +3,9 @@ package org.christelle.javabrains.messenger.resources;
 
 import java.util.List;
 
+import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
@@ -26,17 +28,28 @@ public class MessageResource {
 	}
 	//to get individual messages, map to /messages/messageId 
 	
+	@POST
+	//@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	//public Message addMessage(Message message) {
+	public String addMessage(){
+	return "POST works!";
+	
+	}
+	
+	
+	
 	@GET
 	@Path("/{messageId}")
 	@Produces(MediaType.APPLICATION_JSON)
 	public  Message getMessage(@PathParam("messageId")long Id) {
 		return messageService.getMessage(Id); 
-		
+	
 	}
 	 @GET
 	 @Path("/test")
 	    @Produces(MediaType.TEXT_PLAIN)
 	    public String getIt() {
-	        return "Got it!";
+	        return "Got it!"; 
 	    }
 }
